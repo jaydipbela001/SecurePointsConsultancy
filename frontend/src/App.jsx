@@ -19,8 +19,8 @@ const AppContent = () => {
         <div className="top-nav">
           <div className="nav-brand">SP Financial services</div>
           <div className="lang-selector" onClick={() => setShowLangModal(true)}>
-            {language === 'en' ? 'English' : 'Hindi'} 
-            <span style={{fontSize: '0.7rem', marginLeft: '4px'}}>▼</span>
+            {language === 'en' ? 'English' : 'Hindi'}
+            <span style={{ fontSize: '0.7rem', marginLeft: '4px' }}>▼</span>
           </div>
         </div>
 
@@ -32,8 +32,8 @@ const AppContent = () => {
         </Routes>
 
         {showLangModal && (
-          <LanguageModal 
-            currentLang={language} 
+          <LanguageModal
+            currentLang={language}
             onClose={() => setShowLangModal(false)}
             onSelect={(lang) => {
               setLanguage(lang);

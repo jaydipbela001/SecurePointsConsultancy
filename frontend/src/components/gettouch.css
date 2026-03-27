@@ -39,7 +39,7 @@
     bottom: 0;
     width: 100%;
     max-width: 800px;
-    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+    background: linear-gradient(135deg, #3b4b4e 0%, #1f2b3d 100%);
     color: #fff;
     padding: 16px 24px;
     display: flex;
@@ -50,7 +50,7 @@
     transform: translateX(-50%);
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
-    box-shadow: 0 -10px 30px rgba(124, 58, 237, 0.3);
+    box-shadow: 0 -10px 30px rgb(0 0 0 / 30%);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -243,7 +243,8 @@
     gap: 12px;
 }
 
-.btn-call, .btn-email {
+.btn-call,
+.btn-email {
     flex: 1;
     display: flex;
     align-items: center;
@@ -283,7 +284,8 @@
     box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
 }
 
-.btn-call:active, .btn-email:active {
+.btn-call:active,
+.btn-email:active {
     transform: translateY(0);
 }
 
@@ -292,6 +294,7 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -302,6 +305,7 @@
         transform: translateY(30px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -320,7 +324,7 @@
 
     .sticky-cta {
         padding: 14px 20px;
-        flex-direction: column;
+        flex-direction: row;
         gap: 12px;
         border-radius: 16px 16px 0 0;
     }
@@ -367,7 +371,8 @@
         flex-direction: column;
     }
 
-    .btn-call, .btn-email {
+    .btn-call,
+    .btn-email {
         padding: 12px 16px;
         font-size: 0.9rem;
     }

@@ -14,54 +14,43 @@ export default function Header() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+
     tl.fromTo(
-      contentRef.current,
-      { x: -50, opacity: 0 },
-      { x: 0, opacity: 1, duration: 1, ease: "power3.out" }
+      contentRef.current.children,
+      { x: -30, opacity: 0 },
+      { x: 0, opacity: 1, duration: 1.2, stagger: 0.2 }
     );
+
     tl.fromTo(
-      cardRef.current,
-      { x: 50, opacity: 0 },
-      { x: 0, opacity: 1, duration: 1, ease: "power3.out" },
-      "-=0.8"
+      ".hero-visual",
+      { x: 30, opacity: 0 },
+      { x: 0, opacity: 1, duration: 1.5 },
+      "-=1"
     );
   }, []);
 
   return (
     <section className="modern-hero" ref={heroRef}>
       <div className="hero-container">
-        
         <div className="hero-content" ref={contentRef}>
-          <h2 className="hero-headline">{t.heroHeadline}</h2>
+          <span className="hero-headline">{t.heroHeadline}</span>
           <h1 className="hero-main-name">{t.heroName}</h1>
           <p className="hero-description">{t.heroDescription}</p>
-        </div>
-
-        <div className="hero-card-wrapper" ref={cardRef}>
-          <div className="hero-pristine-card">
-            <div className="hero-avatar-container">
-              <div className="hero-avatar-glow"></div>
-              <img
-                src={logo}
-                alt="Profile"
-                className="hero-avatar"
-              />
-            </div>
-
-            <h3 className="hero-card-name">{t.heroName}</h3>
-            <p className="hero-card-title">{t.heroTitle}</p>
-
-            <div className="hero-socials">
-              <a href="#" className="hero-social-icon" aria-label="Facebook"><FaFacebookF size={18} /></a>
-              <a href="#" className="hero-social-icon" aria-label="Instagram"><FaInstagram size={18} /></a>
-            </div>
-          </div>
           <button className="hero-cta-btn" onClick={() => navigate('/profile')}>
             {t.heroButton} <FaArrowRightLong className="btn-icon" />
           </button>
         </div>
 
+        <div className="hero-visual">
+          <div className="hero-logo-wrapper">
+            <img src={logo} alt="SP Logo" className="hero-logo" />
+          </div>
+          <div className="hero-social-links">
+            <a href="#" className="hero-social-link" aria-label="Facebook"><FaFacebookF /></a>
+            <a href="#" className="hero-social-link" aria-label="Instagram"><FaInstagram /></a>
+          </div>
+        </div>
       </div>
     </section>
   );
