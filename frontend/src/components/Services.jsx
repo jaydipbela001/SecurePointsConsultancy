@@ -33,7 +33,8 @@ export default function Services() {
         <div className="header-accent-line"></div>
         <div className="header-accent-dot"></div>
         <h2 className="services-subtitle">
-          {t.exploreServices || 'Explore Our Services'}
+          {/* {t.exploreServices || 'Explore Our Services'} */}
+          Explore Our Services
         </h2>
         <div className="header-accent-dot"></div>
         <div className="header-accent-line"></div>
