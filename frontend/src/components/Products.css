@@ -1,0 +1,133 @@
+/* Products.css */
+.products-wrapper {
+  background-color: #f8fafc;
+  /* matching the very light blueish gray of the mockup background */
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.section-title-premium {
+  text-align: center;
+  color: #1e3a8a;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-title-premium::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #8b78e6, #4ddbf6);
+  border-radius: 4px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+.product-card {
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+  position: relative;
+  min-height: 180px;
+  color: #1e293b;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Gradients matching your request: White to Soft Professional Colors */
+.card-purple {
+  background: linear-gradient(135deg, #ffffff 10%, #f3f2de 100%);
+}
+
+.card-pink {
+  background: linear-gradient(135deg, #ffffff 10%, #fce7f3 100%);
+}
+
+.card-cyan {
+  background: linear-gradient(135deg, #ffffff 10%, #e0f2fe 100%);
+}
+
+.card-green {
+  background: linear-gradient(135deg, #ffffff 10%, #dcfce7 100%);
+}
+
+.product-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.product-title {
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.product-subtitle {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.product-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: auto;
+}
+
+.arrow-icon {
+  color: #94a3b8;
+}
+
+.product-card.locked {
+  opacity: 0.9;
+}
+
+.coming-soon-badge {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  color: #3b82f6;
+  font-size: 0.65rem;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

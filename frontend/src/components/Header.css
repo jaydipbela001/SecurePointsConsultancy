@@ -1,0 +1,227 @@
+/* Header.css */
+/* Top Nav (Global) */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.nav-brand { font-weight: 800; font-size: 1.25rem; color: #0f172a; letter-spacing: -0.5px; }
+
+/* MODERN HERO HEADER - VIBRANT THEME */
+.modern-hero {
+  position: relative;
+  width: 100%;
+  padding: 80px 24px;
+  background: linear-gradient(135deg, #5b60bc 0%, #babcd7 100%); /* Vibrant Indigo to Violet */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  min-height: 600px;
+  align-items: center;
+}
+
+.hero-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Left Content */
+.hero-content {
+  flex: 1;
+  color: #ffffff;
+  text-align: left;
+}
+
+.hero-headline {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.hero-main-name {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #fbbf24; /* Golden yellow */
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+  opacity: 0.9;
+}
+
+.hero-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  color: #6366f1;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.btn-icon {
+  transition: transform 0.3s ease;
+}
+
+.hero-cta-btn:hover .btn-icon {
+  transform: translateX(5px);
+}
+
+/* Right Card */
+.hero-card-wrapper {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.hero-pristine-card {
+  background: #ffffff;
+  border-radius: 40px;
+  padding: 40px 30px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+}
+
+.hero-avatar-container {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 24px;
+}
+
+.hero-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #f8fafc;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-avatar-glow {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(135deg, #6366f1, #fbbf24);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.hero-card-name {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.hero-card-title {
+  font-size: 1rem;
+  color: #6366f1;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.hero-socials {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.hero-social-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #6366f1;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.hero-social-icon:hover {
+  transform: translateY(-3px);
+  background: #4f46e5;
+  box-shadow: 0 8px 15px rgba(99, 102, 241, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+  }
+
+  .hero-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-main-name {
+    font-size: 2.75rem;
+  }
+
+  .hero-headline {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modern-hero {
+    padding: 60px 16px;
+  }
+
+  .hero-main-name {
+    font-size: 2.25rem;
+  }
+
+  .hero-pristine-card {
+    width: 280px;
+    padding: 30px 20px;
+  }
+
+  .hero-avatar-container {
+    width: 120px;
+    height: 120px;
+  }
+}

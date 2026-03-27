@@ -1,0 +1,48 @@
+/* LanguageModal.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background: var(--bg-card);
+  width: 90%;
+  max-width: 400px;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+}
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+.lang-option.selected {
+  border-color: var(--accent-color);
+  background: var(--bg-light);
+}
+.radio-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lang-option.selected .radio-circle { border-color: var(--accent-color); }
+.radio-circle.filled::after { content: ''; width: 10px; height: 10px; background: var(--accent-color); border-radius: 50%; }
+.btn-block { width: 100%; background: var(--accent-color); color: #fff; padding: 14px; border-radius: 8px; font-weight: 600; margin-top: 16px; }

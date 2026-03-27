@@ -1,0 +1,7 @@
+/* Home.css */
+.header-wrapper {
+  background-color: var(--bg-dark-accent);
+  padding: var(--spacing-lg) var(--spacing-lg) calc(var(--spacing-xl) * 2);
+  text-align: center;
+  position: relative;
+}
