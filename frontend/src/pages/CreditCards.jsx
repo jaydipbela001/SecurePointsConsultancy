@@ -441,12 +441,12 @@ export default function CreditCards() {
 
             {/* Modal Tabs */}
             <div style={{display: 'flex', padding: '0 24px', borderBottom: '1px solid #e2e8f0', gap: '24px'}}>
-              <div 
+              {/* <div 
                 style={{padding: '16px 0', cursor: 'pointer', color: activeTab === 'benefits' ? '#3b82f6' : '#64748b', borderBottom: activeTab === 'benefits' ? '2px solid #3b82f6' : '2px solid transparent', fontWeight: activeTab === 'benefits' ? '600' : 'normal'}}
                 onClick={() => setActiveTab('benefits')}
               >
                 {t.brandBenefits}
-              </div>
+              </div> */}
               <div 
                 style={{padding: '16px 0', cursor: 'pointer', color: activeTab === 'eligibility' ? '#3b82f6' : '#64748b', borderBottom: activeTab === 'eligibility' ? '2px solid #3b82f6' : '2px solid transparent', fontWeight: activeTab === 'eligibility' ? '600' : 'normal'}}
                 onClick={() => setActiveTab('eligibility')}
