@@ -5,47 +5,61 @@ import { gsap } from 'gsap';
 import { useLanguage } from '../context/LanguageContext';
 import './CreditCards.css';
 
-// Bank logo components
+// Import bank logo images
+import auLogo from '../assets/img/creditCard/au.png';
+import axisLogo from '../assets/img/creditCard/axis.png';
+import bobLogo from '../assets/img/creditCard/bob.png';
+import equitasLogo from '../assets/img/creditCard/equitas.png';
+import fedrealLogo from '../assets/img/creditCard/fedreal.png';
+import hdfcLogo from '../assets/img/creditCard/hdfc.png';
+import icicLogo from '../assets/img/creditCard/icic.png';
+import kiwiLogo from '../assets/img/creditCard/kiwi.png';
+import kreditLogo from '../assets/img/creditCard/kredit.png';
+import licLogo from '../assets/img/creditCard/lic.png';
+import sbiLogo from '../assets/img/creditCard/sbi.png';
+import scapiaLogo from '../assets/img/creditCard/scapia.png';
+import zetLogo from '../assets/img/creditCard/zet.png';
+
+// Bank logo components with PNG images
 const BankLogos = {
   "AU Small Finance Bank": () => (
-    <div className="bank-logo au-logo">
-      <span style={{ color: '#FF6B35', fontWeight: '900', fontSize: '18px' }}>AU</span>
-    </div>
-  ),
-  "IDFC FIRST Bank": () => (
-    <div className="bank-logo idfc-logo">
-      <span style={{ color: '#0066CC', fontWeight: '800', fontSize: '16px' }}>IDFC</span>
-    </div>
-  ),
-  "Bank of Baroda": () => (
-    <div className="bank-logo bob-logo">
-      <span style={{ color: '#8B1538', fontWeight: '900', fontSize: '17px' }}>BOB</span>
-    </div>
-  ),
-  "HDFC Bank": () => (
-    <div className="bank-logo hdfc-logo">
-      <span style={{ color: '#004276', fontWeight: '900', fontSize: '16px' }}>HDFC</span>
-    </div>
-  ),
-  "SBI": () => (
-    <div className="bank-logo sbi-logo">
-      <span style={{ color: '#0051A2', fontWeight: '900', fontSize: '18px' }}>SBI</span>
-    </div>
-  ),
-  "RBL Bank": () => (
-    <div className="bank-logo rbl-logo">
-      <span style={{ color: '#FF6600', fontWeight: '800', fontSize: '16px' }}>RBL</span>
-    </div>
+    <img src={auLogo} alt="AU Small Finance Bank" className="bank-logo-img" />
   ),
   "Axis Bank": () => (
-    <div className="bank-logo axis-logo">
-      <span style={{ color: '#8B2942', fontWeight: '900', fontSize: '16px' }}>AXIS</span>
-    </div>
+    <img src={axisLogo} alt="Axis Bank" className="bank-logo-img" />
+  ),
+  "Bank of Baroda": () => (
+    <img src={bobLogo} alt="Bank of Baroda" className="bank-logo-img" />
+  ),
+  "Equitas Bank": () => (
+    <img src={equitasLogo} alt="Equitas Bank" className="bank-logo-img" />
+  ),
+  "Federal Bank": () => (
+    <img src={fedrealLogo} alt="Federal Bank" className="bank-logo-img" />
+  ),
+  "HDFC Bank": () => (
+    <img src={hdfcLogo} alt="HDFC Bank" className="bank-logo-img" />
+  ),
+  "ICICI Bank": () => (
+    <img src={icicLogo} alt="ICICI Bank" className="bank-logo-img" />
   ),
   "Kiwi": () => (
-    <div className="bank-logo kiwi-logo">
-      <span style={{ color: '#00C853', fontWeight: '900', fontSize: '18px' }}>🥝</span>
-    </div>
+    <img src={kiwiLogo} alt="Kiwi" className="bank-logo-img" />
+  ),
+  "KreditBee": () => (
+    <img src={kreditLogo} alt="KreditBee" className="bank-logo-img" />
+  ),
+  "LIC Cards": () => (
+    <img src={licLogo} alt="LIC Cards" className="bank-logo-img" />
+  ),
+  "SBI": () => (
+    <img src={sbiLogo} alt="SBI" className="bank-logo-img" />
+  ),
+  "Scapia": () => (
+    <img src={scapiaLogo} alt="Scapia" className="bank-logo-img" />
+  ),
+  "ZET": () => (
+    <img src={zetLogo} alt="ZET" className="bank-logo-img" />
   ),
   "default": (bankName) => (
     <div className="bank-logo default-logo">
@@ -65,6 +79,7 @@ export default function CreditCards() {
     {
       bank: "AU Small Finance Bank",
       title: "AU Small Finance Bank Credit Card",
+      // applyLink: "#apply-au-small-finance-bank",
       features: ["Free vouchers", "Free device insurance"],
       eligibility: {
         welcome_gifts: [
@@ -85,350 +100,10 @@ export default function CreditCards() {
         ],
       },
     },
-    // {
-    //   bank: "IndusInd Bank",
-    //   title: "IndusInd Bank Credit Card",
-    //   features: ["Wide range of variants", "Attractive reward points"],
-    // },
-    // {
-    //   bank: "Bajaj Finserv",
-    //   title: "Bajaj Finserv Insta EMI Card",
-    //   features: ["100% online application", "Instant card activation"],
-    // },
-    {
-      bank: "IDFC FIRST Bank",
-      title: "IDFC FIRST Bank Credit Cards",
-      features: ["Up to 20% off on dining", "10X Reward points"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome bonus of 1000 reward points on first spend",
-          "5% cashback on first 3 months of dining spends",
-          "Complimentary movie vouchers worth ₹500",
-        ],
-        travel: [
-          "2 complimentary airport lounge visits per quarter",
-          "Travel insurance coverage up to ₹10 lakhs",
-          "Hotel discounts up to 15% at partner properties",
-        ],
-        others: [
-          "1% fuel surcharge waiver",
-          "10X reward points on dining and groceries",
-          "No annual fee for first year",
-        ],
-      },
-    },
-    // {
-    //   bank: "Federal Bank",
-    //   title: "Scapia Federal Bank Credit Card",
-    //   features: ["No joining & annual fees", "Unlimited lounge access across India"],
-    // },
-    // {
-    //   bank: "IDFC FIRST Bank",
-    //   title: "IDFC FIRST Power Credit Card",
-    //   features: ["Attractive welcome offers", "Lifestyle Privileges"],
-    // },
-    // {
-    //   bank: "YES Bank",
-    //   title: "YES Bank Credit Card",
-    //   features: ["Cashback on shopping & groceries", "25% discount on BookMyShow"],
-    // },
-    {
-      bank: "Bank of Baroda",
-      title: "Bank of Baroda Credit Card",
-      features: ["Up to 40 reward points", "Life-time free & Premium cards"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome bonus of 500 reward points",
-          "Complimentary BOB financial wellness kit",
-          "First year fee waiver on premium cards",
-        ],
-        travel: [
-          "Railway lounge access 2 times per year",
-          "Travel insurance up to ₹5 lakhs",
-          "Hotel discounts at partner properties",
-        ],
-        others: [
-          "Lifetime free option available",
-          "40 reward points per ₹100 spent",
-          "Fuel surcharge waiver 1%",
-        ],
-      },
-    },
-    {
-      bank: "HDFC Bank",
-      title: "HDFC Bank Credit Card",
-      features: ["30% off on dining", "1500 redeemable bonus rewards"],
-      eligibility: {
-        welcome_gifts: [
-          "1500 bonus reward points on first spend",
-          "Complimentary Amazon voucher worth ₹1000",
-          "30% discount on dining at partner restaurants",
-        ],
-        travel: [
-          "4 complimentary airport lounge accesses per year",
-          "Travel insurance coverage up to ₹10 lakhs",
-          "Hotel and flight booking discounts",
-        ],
-        others: [
-          "5X reward points on dining and groceries",
-          "Fuel surcharge waiver 1%",
-          "Milestone bonus of 1000 points quarterly",
-        ],
-      },
-    },
-    // {
-    //   bank: "Uni",
-    //   title: "Uni GoldX Credit Card",
-    //   features: [
-    //     "Unlimited 1% Gold rewards on all spends",
-    //     "Unlimited 5% Gold on partner brands",
-    //   ],
-    // },
-    {
-      bank: "SBI",
-      title: "SBI IRCTC RuPay Credit Card",
-      features: ["10% value back on train bookings", "Railway lounge access"],
-      eligibility: {
-        welcome_gifts: [
-          "10% value back on first 3 IRCTC transactions",
-          "Complimentary 1000 reward points",
-          "Free railway lounge access vouchers",
-        ],
-        travel: [
-          "Unlimited railway lounge access",
-          "10% value back on all IRCTC bookings",
-          "Travel insurance up to ₹2 lakhs",
-        ],
-        others: [
-          "1% fuel surcharge waiver",
-          "Reward points on all spends",
-          "No annual fee for IRCTC users",
-        ],
-      },
-    },
-    {
-      bank: "SBI",
-      title: "BPCL SBI Credit Card",
-      features: ["₹500 activation bonus", "13X rewards on fuel"],
-      eligibility: {
-        welcome_gifts: [
-          "₹500 activation bonus on first fuel transaction",
-          "Complimentary BPCL fuel vouchers worth ₹1000",
-          "Welcome bonus of 2000 reward points",
-        ],
-        travel: [
-          "Fuel surcharge waiver across all petrol pumps",
-          "13X reward points on fuel purchases",
-          "Travel insurance coverage",
-        ],
-        others: [
-          "4% value back on fuel purchases",
-          "1% cashback on grocery and utility spends",
-          "Annual fee waiver on spending ₹50,000",
-        ],
-      },
-    },
-    {
-      bank: "HDFC Bank",
-      title: "HDFC Bank RuPay Credit Card",
-      features: ["Extraordinary rewards", "Complimentary lounge access"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome bonus of 2000 reward points",
-          "Complimentary shopping vouchers worth ₹1500",
-          "First year annual fee waiver",
-        ],
-        travel: [
-          "8 complimentary airport lounge accesses per year",
-          "Travel insurance coverage up to ₹15 lakhs",
-          "Hotel and flight booking discounts up to 20%",
-        ],
-        others: [
-          "10X reward points on all spends",
-          "Fuel surcharge waiver 1%",
-          "Milestone bonus of 5000 points annually",
-        ],
-      },
-    },
-    {
-      bank: "SBI",
-      title: "SimplyCLICK SBI Credit Card",
-      features: ["10X rewards", "Amazon voucher benefit"],
-      eligibility: {
-        welcome_gifts: [
-          "Amazon voucher worth ₹1000 on first spend",
-          "Welcome bonus of 1500 reward points",
-          "10X reward points on online shopping for first 6 months",
-        ],
-        travel: [
-          "Travel insurance coverage up to ₹5 lakhs",
-          "Hotel booking discounts at partner properties",
-          "Airport lounge access 2 times per year",
-        ],
-        others: [
-          "10X reward points on online shopping",
-          "5X reward points on dining and groceries",
-          "Annual fee waiver on spending ₹2 lakhs",
-        ],
-      },
-    },
-    {
-      bank: "HDFC Bank",
-      title: "Tata Neu Plus HDFC Credit Card",
-      features: ["Extraordinary rewards", "Lounge access"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome bonus of 1500 NeuCoins",
-          "Complimentary Tata products worth ₹2000",
-          "5% cashback on Tata app spends for first 3 months",
-        ],
-        travel: [
-          "4 complimentary airport lounge accesses per year",
-          "Travel insurance coverage up to ₹10 lakhs",
-          "Tata travel booking discounts",
-        ],
-        others: [
-          "5% cashback on Tata app and partner merchants",
-          "1.5% cashback on all other spends",
-          "Fuel surcharge waiver 1%",
-        ],
-      },
-    },
-    {
-      bank: "HDFC Bank",
-      title: "Swiggy HDFC Bank Credit Card",
-      features: ["30% off on dining", "Bonus rewards"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome bonus of 1000 Swiggy Super credits",
-          "30% discount on Swiggy for first 3 months",
-          "Complimentary Swiggy One membership for 3 months",
-        ],
-        travel: [
-          "Travel insurance coverage up to ₹5 lakhs",
-          "Hotel booking discounts",
-          "Airport lounge access 2 times per year",
-        ],
-        others: [
-          "10X reward points on Swiggy orders",
-          "5X reward points on dining and groceries",
-          "1% fuel surcharge waiver",
-        ],
-      },
-    },
-    {
-      bank: "SBI",
-      title: "SimplySAVE SBI Credit Card",
-      features: ["Milestone benefits", "10X rewards"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome bonus of 2000 reward points",
-          "Complimentary shopping vouchers worth ₹1000",
-          "10X reward points on groceries for first 6 months",
-        ],
-        travel: [
-          "Travel insurance coverage up to ₹5 lakhs",
-          "Railway lounge access 2 times per year",
-          "Hotel booking discounts",
-        ],
-        others: [
-          "10X reward points on groceries and dining",
-          "5X reward points on movies and utilities",
-          "Annual fee waiver on spending ₹1.5 lakhs",
-        ],
-      },
-    },
-    {
-      bank: "RBL Bank",
-      title: "RBL Bank Credit Card",
-      features: ["Lifetime free cards", "Attractive cashback"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome bonus of 500 reward points",
-          "Complimentary shopping vouchers worth ₹750",
-          "First year annual fee waiver",
-        ],
-        travel: [
-          "Travel insurance coverage up to ₹5 lakhs",
-          "Hotel booking discounts at partner properties",
-          "Airport lounge access 1 time per year",
-        ],
-        others: [
-          "Lifetime free option available",
-          "5% cashback on selected categories",
-          "2% cashback on all other spends",
-        ],
-      },
-    },
-    {
-      bank: "SBI",
-      title: "Cashback SBI Credit Card",
-      features: ["Cashback on spends", "Fuel surcharge waiver"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome bonus of 1000 reward points",
-          "5% cashback on first 3 months of spends",
-          "Complimentary fuel vouchers worth ₹500",
-        ],
-        travel: [
-          "Travel insurance coverage up to ₹5 lakhs",
-          "Railway lounge access 2 times per year",
-          "Hotel booking discounts",
-        ],
-        others: [
-          "5% cashback on selected categories",
-          "1% cashback on all other spends",
-          "Fuel surcharge waiver 1%",
-        ],
-      },
-    },
-    {
-      bank: "SBI",
-      title: "Miles SBI Credit Card",
-      features: ["Travel perks", "Attractive benefits"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome bonus of 2000 air miles",
-          "Complimentary travel vouchers worth ₹1500",
-          "2X air miles on first 6 months of spends",
-        ],
-        travel: [
-          "4 complimentary airport lounge accesses per year",
-          "Travel insurance coverage up to ₹10 lakhs",
-          "Hotel and flight booking discounts up to 15%",
-        ],
-        others: [
-          "2X air miles on all spends",
-          "4X air miles on travel bookings",
-          "Annual fee waiver on spending ₹3 lakhs",
-        ],
-      },
-    },
-    {
-      bank: "SBI",
-      title: "Reliance SBI Credit Card",
-      features: ["Welcome benefits up to 3000", "Reward system"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome benefits worth ₹3000",
-          "Complimentary Reliance shopping vouchers",
-          "5% cashback on Reliance products for first 3 months",
-        ],
-        travel: [
-          "Travel insurance coverage up to ₹5 lakhs",
-          "Airport lounge access 2 times per year",
-          "Hotel booking discounts",
-        ],
-        others: [
-          "5% cashback on Reliance products",
-          "2% cashback on all other spends",
-          "Fuel surcharge waiver 1%",
-        ],
-      },
-    },
     {
       bank: "Axis Bank",
       title: "Axis Bank Credit Card",
+      // applyLink: "#apply-axis-bank",
       features: ["Welcome offer", "Rewards on daily spends"],
       eligibility: {
         welcome_gifts: [
@@ -449,8 +124,116 @@ export default function CreditCards() {
       },
     },
     {
+      bank: "Bank of Baroda",
+      title: "Bank of Baroda Credit Card",
+      // applyLink: "#apply-bank-of-baroda",
+      features: ["Up to 40 reward points", "Life-time free & Premium cards"],
+      eligibility: {
+        welcome_gifts: [
+          "Welcome bonus of 500 reward points",
+          "Complimentary BOB financial wellness kit",
+          "First year fee waiver on premium cards",
+        ],
+        travel: [
+          "Railway lounge access 2 times per year",
+          "Travel insurance up to ₹5 lakhs",
+          "Hotel discounts at partner properties",
+        ],
+        others: [
+          "Lifetime free option available",
+          "40 reward points per ₹100 spent",
+          "Fuel surcharge waiver 1%",
+        ],
+      },
+    },
+    {
+      bank: "Equitas Bank",
+      title: "Equitas Bank Credit Card",
+      // applyLink: "#apply-equetas-bank",
+      features: ["Lifetime free", "Reward points on spends"],
+      eligibility: {
+        welcome_gifts: [
+          "Welcome bonus of 500 reward points",
+          "No annual fee for first year",
+        ],
+        travel: [
+          "Travel insurance coverage up to ₹2 lakhs",
+          "Hotel booking discounts",
+        ],
+        others: [
+          "1% cashback on utility bills",
+          "Reward points on all spends",
+        ],
+      },
+    },
+    {
+      bank: "Federal Bank",
+      title: "Federal Bank Credit Card",
+      // applyLink: "#apply-federal-bank",
+      features: ["No joining fee", "Attractive rewards"],
+      eligibility: {
+        welcome_gifts: [
+          "Welcome bonus of 1000 reward points",
+          "Complimentary shopping vouchers",
+        ],
+        travel: [
+          "Airport lounge access 2 times per year",
+          "Travel insurance coverage",
+        ],
+        others: [
+          "2% cashback on online shopping",
+          "Reward points on every spend",
+        ],
+      },
+    },
+    {
+      bank: "HDFC Bank",
+      title: "HDFC Bank Credit Card",
+      // applyLink: "#apply-hdfc-bank",
+      features: ["30% off on dining", "1500 redeemable bonus rewards"],
+      eligibility: {
+        welcome_gifts: [
+          "1500 bonus reward points on first spend",
+          "Complimentary Amazon voucher worth ₹1000",
+          "30% discount on dining at partner restaurants",
+        ],
+        travel: [
+          "4 complimentary airport lounge accesses per year",
+          "Travel insurance coverage up to ₹10 lakhs",
+          "Hotel and flight booking discounts",
+        ],
+        others: [
+          "5X reward points on dining and groceries",
+          "Fuel surcharge waiver 1%",
+          "Milestone bonus of 1000 points quarterly",
+        ],
+      },
+    },
+    {
+      bank: "ICICI Bank",
+      title: "ICICI Bank Credit Card",
+      // applyLink: "#apply-icici-bank",
+      features: ["Reward points", "Shopping benefits"],
+      eligibility: {
+        welcome_gifts: [
+          "Welcome bonus of 2000 reward points",
+          "Complimentary shopping vouchers worth ₹1500",
+        ],
+        travel: [
+          "Airport lounge access 2 times per year",
+          "Travel insurance coverage up to ₹5 lakhs",
+        ],
+        others: [
+          "2% cashback on online shopping",
+          "Reward points on all spends",
+          "Fuel surcharge waiver",
+        ],
+      },
+    },
+    {
       bank: "Kiwi",
       title: "Kiwi Lifetime Free Credit Card",
+      //  applyLink: "#apply-kiwi",
       features: ["UPI + Credit Card"],
       eligibility: {
         welcome_gifts: [
@@ -471,81 +254,104 @@ export default function CreditCards() {
       },
     },
     {
-      bank: "HDFC Bank",
-      title: "HDFC Bank Biz Credit Card",
-      features: ["Discounts", "Travel perks"],
+      bank: "KreditBee",
+      title: "KreditBee Credit Card",
+      // applyLink: "#apply-kreditbee",
+      features: ["Instant approval", "Digital credit card"],
       eligibility: {
         welcome_gifts: [
-          "Welcome bonus of 2000 reward points",
-          "Complimentary business travel vouchers worth ₹2000",
-          "5% cashback on business spends for first 3 months",
+          "Welcome bonus of 300 reward points",
+          "Instant digital card issuance",
         ],
         travel: [
-          "8 complimentary airport lounge accesses per year",
-          "Travel insurance coverage up to ₹20 lakhs",
-          "Hotel and flight booking discounts up to 25%",
+          "Travel insurance coverage up to ₹2 lakhs",
         ],
         others: [
-          "5% cashback on business expenses",
-          "2% cashback on all other spends",
-          "Fuel surcharge waiver 1%",
+          "1% cashback on all spends",
+          "No annual fee",
+          "Quick loan facility",
         ],
       },
     },
-    // {
-    //   bank: "YES Bank",
-    //   title: "Zagg Credit Card",
-    //   features: ["UPI enabled", "Cashback on UPI spends"],
-    // },
-    // {
-    //   bank: "YES Bank",
-    //   title: "PopClub Credit Card",
-    //   features: ["UPI enabled", "Welcome benefits"],
-    // },
-    // {
-    //   bank: "IDFC FIRST Bank",
-    //   title: "IDFC First Mayura Credit Card",
-    //   features: ["Welcome benefits", "10X reward points"],
-    // },
-    // {
-    //   bank: "IDFC FIRST Bank",
-    //   title: "IDFC First Ashva Credit Card",
-    //   features: ["Welcome offers", "10X reward points"],
-    // },
     {
-      bank: "HDFC Bank",
-      title: "Marriott Bonvoy HDFC Credit Card",
-      features: ["Premium benefits", "Lounge access"],
-    },
-    // {
-    //   bank: "RBL Bank",
-    //   title: "IndianOil RBL Credit Card",
-    //   features: ["Fuel benefits", "Welcome rewards"],
-    // },
-    // {
-    //   bank: "IndusInd Bank",
-    //   title: "IndusInd Tiger Credit Card",
-    //   features: ["Reward points", "Lounge access"],
-    // },
-    {
-      bank: "HDFC Bank",
-      title: "HDFC Bank PIXEL Credit Card",
-      features: ["1% unlimited cashback", "Up to 5% cashback"],
+      bank: "LIC Cards",
+      title: "LIC Credit Card",
+      // applyLink: "#apply-lic-cards",
+      features: ["Insurance benefits", "Reward points"],
       eligibility: {
         welcome_gifts: [
           "Welcome bonus of 1000 reward points",
-          "Complimentary digital vouchers worth ₹1000",
-          "5% cashback on selected categories for first 3 months",
+          "Complimentary insurance coverage",
         ],
         travel: [
-          "Travel insurance coverage up to ₹5 lakhs",
-          "Hotel booking discounts",
-          "Airport lounge access 2 times per year",
+          "Travel insurance coverage up to ₹10 lakhs",
+          "Airport lounge access",
         ],
         others: [
-          "1% unlimited cashback on all spends",
-          "5% cashback on selected categories",
-          "Fuel surcharge waiver 1%",
+          "Reward points on premium payments",
+          "Insurance premium discounts",
+        ],
+      },
+    },
+    {
+      bank: "SBI",
+      title: "SBI Credit Card",
+      // applyLink: "#apply-sbi",
+      features: ["Welcome benefits", "Reward system"],
+      eligibility: {
+        welcome_gifts: [
+          "Welcome benefits worth up to ₹3000",
+          "Exclusive reward points on various categories",
+        ],
+        travel: [
+          "Fuel surcharge waiver",
+          "Railway lounge access",
+          "Travel insurance coverage up to ₹5 lakhs",
+        ],
+        others: [
+          "Reward points on all spends",
+          "Annual fee waiver on spending ₹1 lakh",
+        ],
+      },
+    },
+    {
+      bank: "Scapia",
+      title: "Scapia Credit Card",
+      // applyLink: "#apply-scapia",
+      features: ["Travel benefits", "No forex markup"],
+      eligibility: {
+        welcome_gifts: [
+          "Travel vouchers worth ₹2000",
+          "Zero forex markup on international spends",
+        ],
+        travel: [
+          "Complimentary airport lounge access",
+          "Exclusive travel deals",
+          "Travel insurance coverage up to ₹10 lakhs",
+        ],
+        others: [
+          "5X reward points on travel bookings",
+          "No foreign transaction fees",
+        ],
+      },
+    },
+    {
+      bank: "ZET",
+      title: "ZET Credit Card",
+      // applyLink: "#apply-zet",
+      features: ["Digital card", "Instant approval"],
+      eligibility: {
+        welcome_gifts: [
+          "Welcome bonus of 500 reward points",
+          "Instant digital card",
+        ],
+        travel: [
+          "Travel insurance coverage up to ₹2 lakhs",
+        ],
+        others: [
+          "1% cashback on all spends",
+          "No annual fee",
+          "Mobile app management",
         ],
       },
     },
@@ -604,7 +410,12 @@ export default function CreditCards() {
                 </div>
                 {t.viewBenefits}
               </div>
-              <button className="btn-block-apply">{t.apply}</button>
+              <button 
+                className="btn-block-apply"
+                // onClick={() => window.open(card.applyLink, '_blank')}
+              >
+                {t.apply}
+              </button>
             </div>
           </div>
         ))}
@@ -885,7 +696,18 @@ export default function CreditCards() {
 
             {/* Modal Sticky Apply */}
             <div style={{padding: '16px 24px', borderTop: '1px solid #e2e8f0', background: '#fff', position: 'sticky', bottom: 0}}>
-               <button className="btn-block-apply" style={{marginTop: 0}}>{t.apply}</button>
+               <button 
+                 className="btn-block-apply" 
+                 style={{marginTop: 0}}
+                 onClick={() => {
+                   const currentCard = creditCards.find(card => card.title === selectedCard);
+                   if (currentCard && currentCard.applyLink !== '#') {
+                     window.open(currentCard.applyLink, '_blank');
+                   }
+                 }}
+               >
+                 {t.apply}
+               </button>
             </div>
           </div>
         </div>

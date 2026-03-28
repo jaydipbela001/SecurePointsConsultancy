@@ -5,132 +5,41 @@ import { gsap } from 'gsap';
 import { useLanguage } from '../context/LanguageContext';
 import './PersonalLoans.css';
 
-// Provider logo components
+// Import provider logo images
+import dmiLogo from '../assets/img/personalLoan/dmi.png';
+import fiLogo from '../assets/img/personalLoan/fi.png';
+import heroLogo from '../assets/img/personalLoan/hero.png';
+import inCreadLogo from '../assets/img/personalLoan/inCread.png';
+import poonawallLogo from '../assets/img/personalLoan/poonawall.png';
+import prefrLogo from '../assets/img/personalLoan/prefr.png';
+import sibLogo from '../assets/img/personalLoan/sib.png';
+import unityLogo from '../assets/img/personalLoan/unity.png';
+
+// Provider logo components with PNG images
 const ProviderLogos = {
-  "MoneyView": () => (
-    <div className="bank-logo moneyview-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '16px' }}>MV</span>
-    </div>
+  "DMI Finance": () => (
+    <img src={dmiLogo} alt="DMI Finance" className="bank-logo-img" />
   ),
-  "KreditBee": () => (
-    <div className="bank-logo kreditbee-logo">
-      <span style={{ color: '#ffffff', fontWeight: '800', fontSize: '15px' }}>KB</span>
-    </div>
-  ),
-  "Kissht": () => (
-    <div className="bank-logo kissht-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '16px' }}>KS</span>
-    </div>
-  ),
-  "Prefr": () => (
-    <div className="bank-logo prefr-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '17px' }}>PF</span>
-    </div>
-  ),
-  "Olyv": () => (
-    <div className="bank-logo olyv-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '18px' }}>OL</span>
-    </div>
-  ),
-  "Zype": () => (
-    <div className="bank-logo zype-logo">
-      <span style={{ color: '#ffffff', fontWeight: '800', fontSize: '16px' }}>ZP</span>
-    </div>
-  ),
-  "NIRA": () => (
-    <div className="bank-logo nira-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '18px' }}>NR</span>
-    </div>
-  ),
-  "FatakPay": () => (
-    <div className="bank-logo fatakpay-logo">
-      <span style={{ color: '#ffffff', fontWeight: '800', fontSize: '15px' }}>FP</span>
-    </div>
-  ),
-  "InstaMoney": () => (
-    <div className="bank-logo instamoney-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '15px' }}>IM</span>
-    </div>
-  ),
-  "Unity SFB": () => (
-    <div className="bank-logo unity-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '16px' }}>US</span>
-    </div>
-  ),
-  "Poonawalla Fincorp": () => (
-    <div className="bank-logo poonawalla-logo">
-      <span style={{ color: '#ffffff', fontWeight: '800', fontSize: '14px' }}>PF</span>
-    </div>
-  ),
-  "LendingPlate": () => (
-    <div className="bank-logo lendingplate-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '14px' }}>LP</span>
-    </div>
-  ),
-  "FlexiLoans": () => (
-    <div className="bank-logo flexiloans-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '15px' }}>FL</span>
-    </div>
-  ),
-  "Aditya Birla Capital": () => (
-    <div className="bank-logo adityabirla-logo">
-      <span style={{ color: '#ffffff', fontWeight: '800', fontSize: '13px' }}>AB</span>
-    </div>
-  ),
-  "HDFC Bank": () => (
-    <div className="bank-logo hdfc-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '16px' }}>HDFC</span>
-    </div>
-  ),
-  "Ram Fincorp": () => (
-    <div className="bank-logo ramfincorp-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '15px' }}>RF</span>
-    </div>
-  ),
-  "Ring": () => (
-    <div className="bank-logo ring-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '17px' }}>RG</span>
-    </div>
-  ),
-  "CreditSea": () => (
-    <div className="bank-logo creditsea-logo">
-      <span style={{ color: '#ffffff', fontWeight: '800', fontSize: '15px' }}>CS</span>
-    </div>
+  "Fi": () => (
+    <img src={fiLogo} alt="Fi" className="bank-logo-img" />
   ),
   "Hero FinCorp": () => (
-    <div className="bank-logo herofincorp-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '15px' }}>HF</span>
-    </div>
+    <img src={heroLogo} alt="Hero FinCorp" className="bank-logo-img" />
   ),
-  "Trillion": () => (
-    <div className="bank-logo trillion-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '16px' }}>TL</span>
-    </div>
+  "inCred": () => (
+    <img src={inCreadLogo} alt="inCred" className="bank-logo-img" />
   ),
-  "Bajaj Finserv": () => (
-    <div className="bank-logo bajaj-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '14px' }}>BF</span>
-    </div>
+  "Poonawalla Fincorp": () => (
+    <img src={poonawallLogo} alt="Poonawalla Fincorp" className="bank-logo-img" />
   ),
-  "ClickPe": () => (
-    <div className="bank-logo clickpe-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '16px' }}>CP</span>
-    </div>
+  "Prefr": () => (
+    <img src={prefrLogo} alt="Prefr" className="bank-logo-img" />
   ),
-  "cash247": () => (
-    <div className="bank-logo cash247-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '15px' }}>C7</span>
-    </div>
+  "SIB": () => (
+    <img src={sibLogo} alt="SIB" className="bank-logo-img" />
   ),
-  "BharatPe": () => (
-    <div className="bank-logo bharatpe-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '16px' }}>BP</span>
-    </div>
-  ),
-  "RapidMoney": () => (
-    <div className="bank-logo rapidmoney-logo">
-      <span style={{ color: '#ffffff', fontWeight: '900', fontSize: '15px' }}>RM</span>
-    </div>
+  "Unity SFB": () => (
+    <img src={unityLogo} alt="Unity SFB" className="bank-logo-img" />
   ),
   "default": (providerName) => (
     <div className="bank-logo default-logo">
@@ -148,44 +57,93 @@ export default function PersonalLoans() {
 
   const loans = [
     {
-      provider: "MoneyView",
-      title: "MoneyView Personal Loan",
-      loanAmount: "₹5,000 to ₹10 lakh",
-      interestRate: "16% p.a",
+      provider: "DMI Finance",
+      title: "DMI Finance Personal Loan",
+      loanAmount: "₹1 lakh to ₹10 lakh",
+      interestRate: "12% to 24% p.a",
+      applyLink: "https://dmi.mymoneymantra.com/?sms=false&btb=true&utm_source=dmipl&utm_medium=mmm&utm_campaign=dmipl-mmm-966435&pid=NDg2NjFhZjAtYzRmOC0xMWYwLTk2MmMtZjk0ZGFlMTQ1MDI2",
       benefits: {
-        online: ["100% Online", "Minimal documentation"],
-        disbursal: ["24 Hour Disbursal", "Direct bank transfer in a few minutes"],
-        interestRates: ["16% p.a"],
+        online: ["100% Online Process", "Quick approval"],
+        disbursal: ["24-48 Hour Disbursal", "Direct bank transfer"],
+        interestRates: ["12% to 24% p.a"],
         others: [
-          "Check eligibility in 2 Minutes!",
+          "Flexible tenure options",
           "No hidden charges",
           "Collateral-free loans",
-          "Easy EMI",
+          "Minimal documentation",
         ],
       },
     },
     {
-      provider: "KreditBee",
-      title: "KreditBee Personal Loan",
-      loanAmount: "₹7,000 to ₹5 lakh",
-      interestRate: "15% to 29.95% p.a",
+      provider: "Fi",
+      title: "Fi Personal Loan",
+      loanAmount: "₹5,000 to ₹5 lakh",
+      interestRate: "18% to 30% p.a",
+      applyLink: "https://fimoney.mymoneymantra.com/?sms=false&btb=true&utm_source=fimnpl&utm_medium=mmm&utm_campaign=fimnpl-mmm-966435&pid=NDg2NjFhZjAtYzRmOC0xMWYwLTk2MmMtZjk0ZGFlMTQ1MDI2",
       benefits: {
-        online: ["100% Digital Process", "Paperless application"],
+        online: ["Digital-first approach", "Paperless process"],
         disbursal: ["Instant approval", "Quick disbursal"],
-        interestRates: ["15% to 29.95% p.a"],
-        others: ["Flexible tenure", "No collateral required", "Minimal documentation"],
+        interestRates: ["18% to 30% p.a"],
+        others: [
+          "Flexible repayment options",
+          "No collateral required",
+          "Transparent fees",
+          "Mobile app management",
+        ],
       },
     },
     {
-      provider: "Kissht",
-      title: "Kissht Personal Loan",
-      loanAmount: "Up to ₹2 lakh (credit line)",
-      interestRate: "14% to 20%",
+      provider: "Hero FinCorp",
+      title: "Hero FinCorp Personal Loan",
+      loanAmount: "₹50,000 to ₹5 lakh",
+      interestRate: "12% to 28% p.a",
+      applyLink: "https://herofin.mymoneymantra.com/?sms=false&btb=true&utm_source=heropl&utm_medium=mmm&utm_campaign=heropl-mmm-966435&pid=NDg2NjFhZjAtYzRmOC0xMWYwLTk2MmMtZjk0ZGFlMTQ1MDI2",
       benefits: {
-        online: ["Online application", "Instant approval"],
-        disbursal: ["Quick funding", "Credit line facility"],
-        interestRates: ["14% to 20%"],
-        others: ["Revolving credit", "Flexible repayment", "No prepayment charges"],
+        online: ["100% Online Application", "Digital verification"],
+        disbursal: ["Same Day Disbursal", "Quick bank transfer"],
+        interestRates: ["12% to 28% p.a"],
+        others: [
+          "Flexible tenure up to 5 years",
+          "No prepayment charges",
+          "Minimal documentation",
+          "Trusted brand",
+        ],
+      },
+    },
+    {
+      provider: "inCred",
+      title: "inCred Personal Loan",
+      loanAmount: "₹10,000 to ₹2 lakh",
+      interestRate: "16% to 36% p.a",
+      applyLink: "#",
+      benefits: {
+        online: ["Instant online approval", "Simple application"],
+        disbursal: ["Quick disbursal", "Direct transfer"],
+        interestRates: ["16% to 36% p.a"],
+        others: [
+          "Flexible EMI options",
+          "No collateral needed",
+          "Transparent process",
+          "Quick verification",
+        ],
+      },
+    },
+    {
+      provider: "Poonawalla Fincorp",
+      title: "Poonawalla Fincorp Personal Loan",
+      loanAmount: "₹50,000 to ₹10 lakh",
+      interestRate: "12% to 36% p.a",
+      applyLink: "https://poonawalla.mymoneymantra.com/?sms=false&btb=true&utm_source=pnwpl&utm_medium=mmm&utm_campaign=pnwpl-mmm-966435&pid=NDg2NjFhZjAtYzRmOC0xMWYwLTk2MmMtZjk0ZGFlMTQ1MDI2",
+      benefits: {
+        online: ["100% Digital Process", "Paperless application"],
+        disbursal: ["24 Hour Disbursal", "Quick bank transfer"],
+        interestRates: ["12% to 36% p.a"],
+        others: [
+          "Flexible tenure options",
+          "No prepayment charges",
+          "Minimal documentation",
+          "Trusted financial services",
+        ],
       },
     },
     {
@@ -193,274 +151,53 @@ export default function PersonalLoans() {
       title: "Prefr Instant Personal Loan",
       loanAmount: "₹25,000 to ₹3 lakh",
       interestRate: "18% p.a onwards",
+      applyLink: "https://prefr.mymoneymantra.com/?sms=false&btb=true&utm_source=prefr&utm_medium=mmm&utm_campaign=prefr-mmm-966435&pid=NDg2NjFhZjAtYzRmOC0xMWYwLTk2MmMtZjk0ZGFlMTQ1MDI2",
       benefits: {
         online: ["Instant approval", "Digital process"],
         disbursal: ["Same day disbursal", "Direct bank transfer"],
         interestRates: ["18% p.a onwards"],
-        others: ["Quick verification", "Minimal paperwork", "Flexible EMI options"],
+        others: [
+          "Quick verification",
+          "Minimal paperwork",
+          "Flexible EMI options",
+          "No hidden fees",
+        ],
       },
     },
     {
-      provider: "Olyv",
-      title: "Olyv Personal Loan",
-      loanAmount: "₹4,000 to ₹1 lakh",
-      interestRate: "20% to 36% p.a",
+      provider: "SIB",
+      title: "SIB Personal Loan",
+      loanAmount: "₹1 lakh to ₹15 lakh",
+      interestRate: "11% to 20% p.a",
+      applyLink: "#",
       benefits: {
-        online: ["Simple online process", "Quick approval"],
-        disbursal: ["Fast disbursal", "Instant transfer"],
-        interestRates: ["20% to 36% p.a"],
-        others: ["No hidden fees", "Transparent terms", "Easy repayment"],
-      },
-    },
-    {
-      provider: "Zype",
-      title: "Zype Personal Loan",
-      loanAmount: "Up to ₹25 lakh",
-      interestRate: "18% to 39%",
-      benefits: {
-        online: ["100% online", "AI-driven approval"],
-        disbursal: ["Quick disbursal", "Same day funding"],
-        interestRates: ["18% to 39%"],
-        others: ["High loan amount", "Flexible tenure", "No collateral"],
-      },
-    },
-    {
-      provider: "NIRA",
-      title: "NIRA Finance Loan",
-      loanAmount: "₹5,000 to ₹1 lakh",
-      interestRate: "24% to 36% p.a",
-      benefits: {
-        online: ["Simple online application", "Instant verification"],
-        disbursal: ["Quick disbursal", "Bank transfer"],
-        interestRates: ["24% to 36% p.a"],
-        others: ["No collateral", "Flexible repayment", "Transparent fees"],
-      },
-    },
-    {
-      provider: "FatakPay",
-      title: "FatakPay Loan",
-      loanAmount: "Up to ₹2 lakh",
-      interestRate: "24% to 60% p.a",
-      benefits: {
-        online: ["Digital process", "Easy application"],
-        disbursal: ["Fast funding", "Quick approval"],
-        interestRates: ["24% to 60% p.a"],
-        others: ["Instant decision", "Minimal documentation", "No prepayment penalty"],
-      },
-    },
-    {
-      provider: "InstaMoney",
-      title: "InstaMoney Loan",
-      loanAmount: "Up to ₹50,000",
-      interestRate: "From 24% p.a",
-      benefits: {
-        online: ["Online application", "Quick process"],
-        disbursal: ["Instant disbursal", "Fast transfer"],
-        interestRates: ["From 24% p.a"],
-        others: ["Small loan amount", "Easy approval", "No collateral"],
+        online: ["Online application", "Quick processing"],
+        disbursal: ["Fast disbursal", "Bank transfer"],
+        interestRates: ["11% to 20% p.a"],
+        others: [
+          "Competitive interest rates",
+          "Flexible repayment tenure",
+          "No collateral required",
+          "Simple documentation",
+        ],
       },
     },
     {
       provider: "Unity SFB",
-      title: "Unity Personal Loan",
-      loanAmount: "Up to ₹25 lakh",
-      interestRate: "Starting from 18% p.a",
+      title: "Unity Small Finance Bank Personal Loan",
+      loanAmount: "₹50,000 to ₹10 lakh",
+      interestRate: "12% to 24% p.a",
+      applyLink: "https://unitypl.mymoneymantra.com?btb=true&sms=true&utm_source=unitypl&utm_medium=mmm&utm_campaign=unitypl-mmm-966435&pid=NDg2NjFhZjAtYzRmOC0xMWYwLTk2MmMtZjk0ZGFlMTQ1MDI2",
       benefits: {
-        online: ["Digital application", "Online verification"],
-        disbursal: ["Quick disbursal", "Bank funding"],
-        interestRates: ["Starting from 18% p.a"],
-        others: ["High loan amount", "Flexible tenure", "Bank-backed loan"],
-      },
-    },
-    {
-      provider: "Poonawalla Fincorp",
-      title: "Poonawalla Instant Personal Loan",
-      loanAmount: "Up to ₹25 lakh",
-      tenure: "1 to 36 months",
-      benefits: {
-        online: ["Online process", "Quick approval"],
-        disbursal: ["Instant disbursal", "Same day funding"],
-        tenure: ["1 to 36 months"],
-        others: ["High loan amount", "Flexible repayment", "No hidden charges"],
-      },
-    },
-    {
-      provider: "LendingPlate",
-      title: "LendingPlate Loan",
-      loanAmount: "Up to ₹2 lakh",
-      interestRate: "Starting from 12% p.a",
-      benefits: {
-        online: ["Online application", "Quick process"],
-        disbursal: ["Fast disbursal", "Direct transfer"],
-        interestRates: ["Starting from 12% p.a"],
-        others: ["Low interest rates", "Flexible terms", "No collateral"],
-      },
-    },
-    {
-      provider: "FlexiLoans",
-      title: "FlexiLoans",
-      loanAmount: "Up to ₹20 lakh",
-      interestRate: "Starting from 12% p.a",
-      benefits: {
-        online: ["Digital process", "Easy application"],
-        disbursal: ["Quick funding", "Fast approval"],
-        interestRates: ["Starting from 12% p.a"],
-        others: ["High loan amount", "Flexible repayment", "Business loans"],
-      },
-    },
-    {
-      provider: "Aditya Birla Capital",
-      title: "Aditya Birla Digital Personal Loan",
-      loanAmount: "₹50,000 to ₹5 lakh",
-      interestRate: "Starting from 10.99% p.a",
-      benefits: {
-        online: ["Digital process", "Online approval"],
-        disbursal: ["Quick disbursal", "Same day funding"],
-        interestRates: ["Starting from 10.99% p.a"],
-        others: ["Competitive rates", "Trusted brand", "Flexible tenure"],
-      },
-    },
-    {
-      provider: "HDFC Bank",
-      title: "HDFC Insta Loan",
-      loanAmount: "₹25,000 to ₹10 lakh",
-      tenure: "12 to 60 months",
-      benefits: {
-        online: ["Online application", "Instant approval"],
-        disbursal: ["Quick disbursal", "Bank transfer"],
-        tenure: ["12 to 60 months"],
-        others: ["Bank loan", "Trusted lender", "Flexible EMI"],
-      },
-    },
-    {
-      provider: "HDFC Bank",
-      title: "HDFC Smart EMI",
-      loanAmount: "From ₹25,000",
-      tenure: "6 to 48 months",
-      benefits: {
-        online: ["Digital process", "Online conversion"],
-        disbursal: ["Instant EMI", "Quick setup"],
-        tenure: ["6 to 48 months"],
-        others: ["Smart EMI option", "Bank-backed", "Flexible repayment"],
-      },
-    },
-    {
-      provider: "Ram Fincorp",
-      title: "Ram Fincorp Personal Loan",
-      loanAmount: "₹1,000 to ₹1 lakh",
-      interestRate: "Starting from 0.4% per day",
-      benefits: {
-        online: ["Online process", "Quick application"],
-        disbursal: ["Fast disbursal", "Instant transfer"],
-        interestRates: ["Starting from 0.4% per day"],
-        others: ["Small loan amount", "Daily rate", "Quick approval"],
-      },
-    },
-    {
-      provider: "Ring",
-      title: "Ring Power Loan",
-      loanAmount: "₹20,000 to ₹5 lakh",
-      interestRate: "18% to 33% p.a",
-      benefits: {
-        online: ["Digital application", "Quick process"],
-        disbursal: ["Fast funding", "Quick approval"],
-        interestRates: ["18% to 33% p.a"],
-        others: ["Power loan", "Flexible terms", "No collateral"],
-      },
-    },
-    {
-      provider: "CreditSea",
-      title: "CreditSea Personal Loan",
-      loanAmount: "₹20,000 to ₹5 lakh",
-      interestRate: "28% to 32%",
-      benefits: {
-        online: ["Online application", "Digital process"],
-        disbursal: ["Quick disbursal", "Fast funding"],
-        interestRates: ["28% to 32%"],
-        others: ["Fixed rates", "Flexible tenure", "No prepayment charges"],
-      },
-    },
-    {
-      provider: "Hero FinCorp",
-      title: "Hero FinCorp Personal Loan",
-      loanAmount: "₹50,000 to ₹5 lakh",
-      tenure: "12 to 36 months",
-      benefits: {
-        online: ["Online process", "Quick approval"],
-        disbursal: ["Fast disbursal", "Same day funding"],
-        tenure: ["12 to 36 months"],
-        others: ["Trusted brand", "Flexible EMI", "No hidden fees"],
-      },
-    },
-    {
-      provider: "Trillion",
-      title: "Trillion Personal Loan",
-      loanAmount: "₹20,000 to ₹5 lakh",
-      tenure: "6 to 24 months",
-      benefits: {
-        online: ["Digital application", "Quick process"],
-        disbursal: ["Fast funding", "Quick approval"],
-        tenure: ["6 to 24 months"],
-        others: ["Short tenure", "Flexible terms", "No collateral"],
-      },
-    },
-    {
-      provider: "Bajaj Finserv",
-      title: "Bajaj Finserv Personal Loan",
-      loanAmount: "₹50,000 to ₹35 lakh",
-      interestRate: "16.25% to 24.90% p.a",
-      benefits: {
-        online: ["Online application", "Instant approval"],
-        disbursal: ["Quick disbursal", "Same day funding"],
-        interestRates: ["16.25% to 24.90% p.a"],
-        others: ["High loan amount", "Trusted brand", "Flexible EMI"],
-      },
-    },
-    {
-      provider: "ClickPe",
-      title: "ClickPe Business Loan",
-      loanAmount: "₹50,000 to ₹3 lakh",
-      interestRate: "Up to 28% p.a",
-      benefits: {
-        online: ["Digital process", "Quick application"],
-        disbursal: ["Fast funding", "Business loan"],
-        interestRates: ["Up to 28% p.a"],
-        others: ["Business focused", "Flexible terms", "Quick approval"],
-      },
-    },
-    {
-      provider: "cash247",
-      title: "cash247 Personal Loan",
-      loanAmount: "₹2,000 to ₹75,000",
-      interestRate: "Starting from 0.5%",
-      benefits: {
-        online: ["Online process", "Quick application"],
-        disbursal: ["Fast disbursal", "Instant transfer"],
-        interestRates: ["Starting from 0.5%"],
-        others: ["Small loan amount", "Low rates", "Quick approval"],
-      },
-    },
-    {
-      provider: "BharatPe",
-      title: "BharatPe Credit Line on UPI",
-      features: ["45-day interest-free period"],
-      benefits: {
-        online: ["UPI based", "Digital process"],
-        disbursal: ["Instant credit", "UPI integration"],
-        features: ["45-day interest-free period"],
-        others: ["Credit line", "UPI enabled", "No collateral"],
-      },
-    },
-    {
-      provider: "RapidMoney",
-      title: "RapidMoney Loan",
-      loanAmount: "₹5,000 to ₹15,000",
-      interestRate: "3.5%",
-      benefits: {
-        online: ["Online application", "Quick process"],
-        disbursal: ["Fast disbursal", "Instant transfer"],
-        interestRates: ["3.5%"],
-        others: ["Small loan amount", "Low interest", "Quick approval"],
+        online: ["100% Online Process", "Digital verification"],
+        disbursal: ["Quick Disbursal", "Direct bank transfer"],
+        interestRates: ["12% to 24% p.a"],
+        others: [
+          "Flexible tenure options",
+          "No prepayment charges",
+          "Minimal documentation",
+          "Bank-backed security",
+        ],
       },
     },
   ];
@@ -531,7 +268,12 @@ export default function PersonalLoans() {
                 </div>
                 {t.viewDetails}
               </div>
-              <button className="btn-block-apply">{t.apply}</button>
+              <button 
+                className="btn-block-apply"
+                onClick={() => window.open(loan.applyLink, '_blank')}
+              >
+                {t.apply}
+              </button>
             </div>
           </div>
         ))}
@@ -784,7 +526,18 @@ export default function PersonalLoans() {
 
             {/* Modal Sticky Apply */}
             <div style={{padding: '16px 24px', borderTop: '1px solid #e2e8f0', background: '#fff', position: 'sticky', bottom: 0}}>
-               <button className="btn-block-apply" style={{marginTop: 0}}>{t.apply}</button>
+               <button 
+                 className="btn-block-apply" 
+                 style={{marginTop: 0}}
+                 onClick={() => {
+                   const currentLoan = loans.find(loan => loan.title === selectedLoan);
+                   if (currentLoan && currentLoan.applyLink !== '#') {
+                     window.open(currentLoan.applyLink, '_blank');
+                   }
+                 }}
+               >
+                 {t.apply}
+               </button>
             </div>
           </div>
         </div>
