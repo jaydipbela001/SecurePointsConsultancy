@@ -77,9 +77,97 @@ export default function CreditCards() {
 
   const creditCards = [
     {
+      bank: "SBI",
+      title: "SBI Credit Card",
+      applyLink: "https://sbicard.mymoneymantra.com?sms=false&btb=true&utm_source=sbcc&utm_medium=mmm&utm_campaign=sbcc-mmm-966435&pid=NDg2NjFhZjAtYzRmOC0xMWYwLTk2MmMtZjk0ZGFlMTQ1MDI2",
+      features: ["Welcome benefits", "Reward system"],
+      eligibility: {
+        welcome_gifts: [
+          "Welcome benefits worth up to ₹3000",
+          "Exclusive reward points on various categories",
+        ],
+        travel: [
+          "Fuel surcharge waiver",
+          "Railway lounge access",
+          "Travel insurance coverage up to ₹5 lakhs",
+        ],
+        others: [
+          "Reward points on all spends",
+          "Annual fee waiver on spending ₹1 lakh",
+        ],
+      },
+    },
+    {
+      bank: "HDFC Bank",
+      title: "HDFC Bank Credit Card",
+      applyLink: "https://tataneu.mymoneymantra.com?sms=false&btb=true&utm_source=neucc&utm_medium=mmm&utm_campaign=neucc-mmm-966435&pid=NDg2NjFhZjAtYzRmOC0xMWYwLTk2MmMtZjk0ZGFlMTQ1MDI2",
+      features: ["30% off on dining", "1500 redeemable bonus rewards"],
+      eligibility: {
+        welcome_gifts: [
+          "1500 bonus reward points on first spend",
+          "Complimentary Amazon voucher worth ₹1000",
+          "30% discount on dining at partner restaurants",
+        ],
+        travel: [
+          "4 complimentary airport lounge accesses per year",
+          "Travel insurance coverage up to ₹10 lakhs",
+          "Hotel and flight booking discounts",
+        ],
+        others: [
+          "5X reward points on dining and groceries",
+          "Fuel surcharge waiver 1%",
+          "Milestone bonus of 1000 points quarterly",
+        ],
+      },
+    },
+    {
+      bank: "ICICI Bank",
+      title: "ICICI Bank Credit Card",
+      // applyLink: "#apply-icici-bank",
+      features: ["Reward points", "Shopping benefits"],
+      eligibility: {
+        welcome_gifts: [
+          "Welcome bonus of 2000 reward points",
+          "Complimentary shopping vouchers worth ₹1500",
+        ],
+        travel: [
+          "Airport lounge access 2 times per year",
+          "Travel insurance coverage up to ₹5 lakhs",
+        ],
+        others: [
+          "2% cashback on online shopping",
+          "Reward points on all spends",
+          "Fuel surcharge waiver",
+        ],
+      },
+    },
+    {
+      bank: "Axis Bank",
+      title: "Axis Bank Credit Card",
+      applyLink: "https://axis-card.mymoneymantra.com?sms=false&btb=true&utm_source=axs&utm_medium=mmm&utm_campaign=axs-mmm-966435&pid=NDg2NjFhZjAtYzRmOC0xMWYwLTk2MmMtZjk0ZGFlMTQ1MDI2",
+      features: ["Welcome offer", "Rewards on daily spends"],
+      eligibility: {
+        welcome_gifts: [
+          "Welcome bonus of 1000 reward points",
+          "Complimentary shopping vouchers worth ₹1000",
+          "5% cashback on daily spends for first 3 months",
+        ],
+        travel: [
+          "Travel insurance coverage up to ₹10 lakhs",
+          "Airport lounge access 4 times per year",
+          "Hotel booking discounts at partner properties",
+        ],
+        others: [
+          "5X reward points on daily spends",
+          "2X reward points on all other spends",
+          "Annual fee waiver on spending ₹1.5 lakhs",
+        ],
+      },
+    },
+    {
       bank: "AU Small Finance Bank",
       title: "AU Small Finance Bank Credit Card",
-      // applyLink: "#apply-au-small-finance-bank",
+      applyLink: "https://aucc.mymoneymantra.com/?sms=false&btb=true&utm_source=aucc&utm_medium=mmm&utm_campaign=aucc-mmm-966435&pid=NDg2NjFhZjAtYzRmOC0xMWYwLTk2MmMtZjk0ZGFlMTQ1MDI2",
       features: ["Free vouchers", "Free device insurance"],
       eligibility: {
         welcome_gifts: [
@@ -101,32 +189,9 @@ export default function CreditCards() {
       },
     },
     {
-      bank: "Axis Bank",
-      title: "Axis Bank Credit Card",
-      // applyLink: "#apply-axis-bank",
-      features: ["Welcome offer", "Rewards on daily spends"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome bonus of 1000 reward points",
-          "Complimentary shopping vouchers worth ₹1000",
-          "5% cashback on daily spends for first 3 months",
-        ],
-        travel: [
-          "Travel insurance coverage up to ₹10 lakhs",
-          "Airport lounge access 4 times per year",
-          "Hotel booking discounts at partner properties",
-        ],
-        others: [
-          "5X reward points on daily spends",
-          "2X reward points on all other spends",
-          "Annual fee waiver on spending ₹1.5 lakhs",
-        ],
-      },
-    },
-    {
       bank: "Bank of Baroda",
       title: "Bank of Baroda Credit Card",
-      // applyLink: "#apply-bank-of-baroda",
+      applyLink: "https://bobcard.mymoneymantra.com?sms=false&btb=true&utm_source=bobcc&utm_medium=mmm&utm_campaign=bobcc-mmm-966435&pid=NDg2NjFhZjAtYzRmOC0xMWYwLTk2MmMtZjk0ZGFlMTQ1MDI2",
       features: ["Up to 40 reward points", "Life-time free & Premium cards"],
       eligibility: {
         welcome_gifts: [
@@ -169,7 +234,7 @@ export default function CreditCards() {
     {
       bank: "Federal Bank",
       title: "Federal Bank Credit Card",
-      // applyLink: "#apply-federal-bank",
+      applyLink: "https://federalcc.mymoneymantra.com?sms=false&btb=true&utm_source=fedcc&utm_medium=mmm&utm_campaign=fedcc-mmm-966435&pid=NDg2NjFhZjAtYzRmOC0xMWYwLTk2MmMtZjk0ZGFlMTQ1MDI2",
       features: ["No joining fee", "Attractive rewards"],
       eligibility: {
         welcome_gifts: [
@@ -183,50 +248,6 @@ export default function CreditCards() {
         others: [
           "2% cashback on online shopping",
           "Reward points on every spend",
-        ],
-      },
-    },
-    {
-      bank: "HDFC Bank",
-      title: "HDFC Bank Credit Card",
-      // applyLink: "#apply-hdfc-bank",
-      features: ["30% off on dining", "1500 redeemable bonus rewards"],
-      eligibility: {
-        welcome_gifts: [
-          "1500 bonus reward points on first spend",
-          "Complimentary Amazon voucher worth ₹1000",
-          "30% discount on dining at partner restaurants",
-        ],
-        travel: [
-          "4 complimentary airport lounge accesses per year",
-          "Travel insurance coverage up to ₹10 lakhs",
-          "Hotel and flight booking discounts",
-        ],
-        others: [
-          "5X reward points on dining and groceries",
-          "Fuel surcharge waiver 1%",
-          "Milestone bonus of 1000 points quarterly",
-        ],
-      },
-    },
-    {
-      bank: "ICICI Bank",
-      title: "ICICI Bank Credit Card",
-      // applyLink: "#apply-icici-bank",
-      features: ["Reward points", "Shopping benefits"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome bonus of 2000 reward points",
-          "Complimentary shopping vouchers worth ₹1500",
-        ],
-        travel: [
-          "Airport lounge access 2 times per year",
-          "Travel insurance coverage up to ₹5 lakhs",
-        ],
-        others: [
-          "2% cashback on online shopping",
-          "Reward points on all spends",
-          "Fuel surcharge waiver",
         ],
       },
     },
@@ -250,67 +271,6 @@ export default function CreditCards() {
           "Lifetime free with no annual fee",
           "2% cashback on UPI transactions",
           "1% cashback on all other spends",
-        ],
-      },
-    },
-    {
-      bank: "KreditBee",
-      title: "KreditBee Credit Card",
-      // applyLink: "#apply-kreditbee",
-      features: ["Instant approval", "Digital credit card"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome bonus of 300 reward points",
-          "Instant digital card issuance",
-        ],
-        travel: [
-          "Travel insurance coverage up to ₹2 lakhs",
-        ],
-        others: [
-          "1% cashback on all spends",
-          "No annual fee",
-          "Quick loan facility",
-        ],
-      },
-    },
-    {
-      bank: "LIC Cards",
-      title: "LIC Credit Card",
-      // applyLink: "#apply-lic-cards",
-      features: ["Insurance benefits", "Reward points"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome bonus of 1000 reward points",
-          "Complimentary insurance coverage",
-        ],
-        travel: [
-          "Travel insurance coverage up to ₹10 lakhs",
-          "Airport lounge access",
-        ],
-        others: [
-          "Reward points on premium payments",
-          "Insurance premium discounts",
-        ],
-      },
-    },
-    {
-      bank: "SBI",
-      title: "SBI Credit Card",
-      // applyLink: "#apply-sbi",
-      features: ["Welcome benefits", "Reward system"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome benefits worth up to ₹3000",
-          "Exclusive reward points on various categories",
-        ],
-        travel: [
-          "Fuel surcharge waiver",
-          "Railway lounge access",
-          "Travel insurance coverage up to ₹5 lakhs",
-        ],
-        others: [
-          "Reward points on all spends",
-          "Annual fee waiver on spending ₹1 lakh",
         ],
       },
     },
