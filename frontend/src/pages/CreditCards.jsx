@@ -265,12 +265,15 @@ export default function CreditCards() {
                 </div>
                 {t.viewBenefits}
               </div>
-              <button 
+              <a 
+                href={card.applyLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-block-apply"
-                // onClick={() => window.open(card.applyLink, '_blank')}
+                style={{display: 'block', textAlign: 'center', textDecoration: 'none'}}
               >
                 {t.apply}
-              </button>
+              </a>
             </div>
           </div>
         ))}
@@ -551,18 +554,20 @@ export default function CreditCards() {
 
             {/* Modal Sticky Apply */}
             <div style={{padding: '16px 24px', borderTop: '1px solid #e2e8f0', background: '#fff', position: 'sticky', bottom: 0}}>
-               <button 
-                 className="btn-block-apply" 
-                 style={{marginTop: 0}}
-                 onClick={() => {
-                   const currentCard = creditCards.find(card => card.title === selectedCard);
-                   if (currentCard && currentCard.applyLink !== '#') {
-                     window.open(currentCard.applyLink, '_blank');
-                   }
-                 }}
-               >
-                 {t.apply}
-               </button>
+               {(() => {
+                 const currentCard = creditCards.find(card => card.title === selectedCard);
+                 return currentCard && currentCard.applyLink !== '#' ? (
+                   <a 
+                     href={currentCard.applyLink}
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="btn-block-apply" 
+                     style={{marginTop: 0, display: 'block', textAlign: 'center', textDecoration: 'none'}}
+                   >
+                     {t.apply}
+                   </a>
+                 ) : null;
+               })()}
             </div>
           </div>
         </div>
