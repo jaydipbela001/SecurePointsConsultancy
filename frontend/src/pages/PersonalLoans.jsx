@@ -165,24 +165,6 @@ export default function PersonalLoans() {
         ],
       },
     },
-    {
-      provider: "SIB",
-      title: "SIB Personal Loan",
-      loanAmount: "₹1 lakh to ₹15 lakh",
-      interestRate: "11% to 20% p.a",
-      applyLink: "#",
-      benefits: {
-        online: ["Online application", "Quick processing"],
-        disbursal: ["Fast disbursal", "Bank transfer"],
-        interestRates: ["11% to 20% p.a"],
-        others: [
-          "Competitive interest rates",
-          "Flexible repayment tenure",
-          "No collateral required",
-          "Simple documentation",
-        ],
-      },
-    },
   ];
 
   useEffect(() => {

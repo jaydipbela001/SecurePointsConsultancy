@@ -121,27 +121,6 @@ export default function CreditCards() {
       },
     },
     {
-      bank: "ICICI Bank",
-      title: "ICICI Bank Credit Card",
-      // applyLink: "#apply-icici-bank",
-      features: ["Reward points", "Shopping benefits"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome bonus of 2000 reward points",
-          "Complimentary shopping vouchers worth ₹1500",
-        ],
-        travel: [
-          "Airport lounge access 2 times per year",
-          "Travel insurance coverage up to ₹5 lakhs",
-        ],
-        others: [
-          "2% cashback on online shopping",
-          "Reward points on all spends",
-          "Fuel surcharge waiver",
-        ],
-      },
-    },
-    {
       bank: "Axis Bank",
       title: "Axis Bank Credit Card",
       applyLink: "https://axis-card.mymoneymantra.com?sms=false&btb=true&utm_source=axs&utm_medium=mmm&utm_campaign=axs-mmm-966435&pid=NDg2NjFhZjAtYzRmOC0xMWYwLTk2MmMtZjk0ZGFlMTQ1MDI2",
@@ -212,26 +191,6 @@ export default function CreditCards() {
       },
     },
     {
-      bank: "Equitas Bank",
-      title: "Equitas Bank Credit Card",
-      // applyLink: "#apply-equetas-bank",
-      features: ["Lifetime free", "Reward points on spends"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome bonus of 500 reward points",
-          "No annual fee for first year",
-        ],
-        travel: [
-          "Travel insurance coverage up to ₹2 lakhs",
-          "Hotel booking discounts",
-        ],
-        others: [
-          "1% cashback on utility bills",
-          "Reward points on all spends",
-        ],
-      },
-    },
-    {
       bank: "Federal Bank",
       title: "Federal Bank Credit Card",
       applyLink: "https://federalcc.mymoneymantra.com?sms=false&btb=true&utm_source=fedcc&utm_medium=mmm&utm_campaign=fedcc-mmm-966435&pid=NDg2NjFhZjAtYzRmOC0xMWYwLTk2MmMtZjk0ZGFlMTQ1MDI2",
@@ -248,70 +207,6 @@ export default function CreditCards() {
         others: [
           "2% cashback on online shopping",
           "Reward points on every spend",
-        ],
-      },
-    },
-    {
-      bank: "Kiwi",
-      title: "Kiwi Lifetime Free Credit Card",
-      //  applyLink: "#apply-kiwi",
-      features: ["UPI + Credit Card"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome bonus of 500 reward points",
-          "Complimentary UPI transaction credits worth ₹500",
-          "Lifetime free with no annual fee",
-        ],
-        travel: [
-          "Travel insurance coverage up to ₹2 lakhs",
-          "Hotel booking discounts at partner properties",
-          "Airport lounge access 1 time per year",
-        ],
-        others: [
-          "Lifetime free with no annual fee",
-          "2% cashback on UPI transactions",
-          "1% cashback on all other spends",
-        ],
-      },
-    },
-    {
-      bank: "Scapia",
-      title: "Scapia Credit Card",
-      // applyLink: "#apply-scapia",
-      features: ["Travel benefits", "No forex markup"],
-      eligibility: {
-        welcome_gifts: [
-          "Travel vouchers worth ₹2000",
-          "Zero forex markup on international spends",
-        ],
-        travel: [
-          "Complimentary airport lounge access",
-          "Exclusive travel deals",
-          "Travel insurance coverage up to ₹10 lakhs",
-        ],
-        others: [
-          "5X reward points on travel bookings",
-          "No foreign transaction fees",
-        ],
-      },
-    },
-    {
-      bank: "ZET",
-      title: "ZET Credit Card",
-      // applyLink: "#apply-zet",
-      features: ["Digital card", "Instant approval"],
-      eligibility: {
-        welcome_gifts: [
-          "Welcome bonus of 500 reward points",
-          "Instant digital card",
-        ],
-        travel: [
-          "Travel insurance coverage up to ₹2 lakhs",
-        ],
-        others: [
-          "1% cashback on all spends",
-          "No annual fee",
-          "Mobile app management",
         ],
       },
     },
