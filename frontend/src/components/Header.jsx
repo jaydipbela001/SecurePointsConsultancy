@@ -47,8 +47,8 @@ export default function Header() {
             <img src={logo} alt="SP Logo" className="hero-logo" />
           </div>
           <div className="hero-social-links">
-            <a href="#" className="hero-social-link" aria-label="Facebook"><FaFacebookF /></a>
-            <a href="#" className="hero-social-link" aria-label="Instagram"><FaInstagram /></a>
+            <a href="https://www.facebook.com/share/1CMMmDeezp/" className="hero-social-link" aria-label="Facebook"><FaFacebookF /></a>
+            <a href="https://www.instagram.com/s.p.consultancy?igsh=amtobjZ4aXg3cG02" className="hero-social-link" aria-label="Instagram"><FaInstagram /></a>
           </div>
         </div>
       </div>
