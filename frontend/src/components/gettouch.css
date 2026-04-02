@@ -76,6 +76,10 @@
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
     font-size: 0.9rem;
+    -webkit-tap-highlight-color: transparent;
+        -webkit-user-select: none;
+        user-select: none;
+        touch-action: manipulation;
 }
 
 .btn-primary:hover {
