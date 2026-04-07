@@ -69,7 +69,7 @@ function GetTouch() {
                                 </div>
                                 <div className="contact-details">
                                     <div className="contact-label">Email Address</div>
-                                    <div className="contact-value">borichadinesh32@gmail.com</div>
+                                    <div className="contact-value">piyushahir2905@gmail.com</div>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@ function GetTouch() {
                                 <Phone size={18} />
                                 Call Now
                             </button>
-                            <button className="btn-email" onClick={() => window.open('mailto:borichadinesh32@gmail.com')}>
+                            <button className="btn-email" onClick={() => window.open('mailto:piyushahir2905@gmail.com')}>
                                 <Mail size={18} />
                                 Send Email
                             </button>

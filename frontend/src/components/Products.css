@@ -67,11 +67,13 @@
 
 /* Gradients matching your request: White to Soft Professional Colors */
 .card-purple {
-  background: linear-gradient(135deg, #ffffff 10%, #f3f2de 100%);
+  /* background: linear-gradient(135deg, #ffffff 10%, #f3f2de 100%); */
+  background: linear-gradient(135deg, #ffffff 10%, #fce7e7 100%);
 }
 
 .card-pink {
-  background: linear-gradient(135deg, #ffffff 10%, #fce7f3 100%);
+  /* background: linear-gradient(135deg, #ffffff 10%, #fce7f3 100%); */
+    background: linear-gradient(135deg, #ffffff 10%, #f3f2de 100%);
 }
 
 .card-cyan {

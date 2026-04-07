@@ -118,7 +118,7 @@ export default function Profile() {
               </div>
               <div className="info-details">
                 <div className="info-label">Email Address</div>
-                <div className="info-value">borichadinesh32@gmail.com</div>
+                <div className="info-value">piyushahir2905@gmail.com</div>
               </div>
             </div>
 
