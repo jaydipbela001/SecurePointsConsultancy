@@ -67,12 +67,41 @@
   justify-content: space-between;
   color: #fff;
   cursor: pointer;
-  /* box-shadow: 0 10px 25px rgb(150 150 150 / 51%); */
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
   width: 90%;
   margin: 0 auto;
+}
+
+.service-banner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 300px;
+  height: 300px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-1000 -1000 2000 2000'%3E%3Cpath fill='rgb(228,234,248)' fill-opacity='0.2' d=' M0,-868.3980102539062 C479.6029968261719,-868.3980102539062 868.3989868164062,-479.60400390625 868.3989868164062,0 C868.3989868164062,479.6029968261719 479.6029968261719,868.3980102539062 0,868.3980102539062 C-479.6029968261719,868.3980102539062 -868.3989868164062,479.6029968261719 -868.3989868164062,0 C-868.3989868164062,-479.60400390625 -479.6029968261719,-868.3980102539062 0,-868.3980102539062z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.service-banner::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: -5%;
+  width: 400px;
+  height: 400px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-1000 -1000 2000 2000'%3E%3Cpath fill='rgb(228,234,248)' fill-opacity='0.15' d=' M0,-868.3980102539062 C479.6029968261719,-868.3980102539062 868.3989868164062,-479.60400390625 868.3989868164062,0 C868.3989868164062,479.6029968261719 479.6029968261719,868.3980102539062 0,868.3980102539062 C-479.6029968261719,868.3980102539062 -868.3989868164062,479.6029968261719 -868.3989868164062,0 C-868.3989868164062,-479.60400390625 -479.6029968261719,-868.3980102539062 0,-868.3980102539062z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(0, 0) scale(1.5);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .service-banner:hover {
