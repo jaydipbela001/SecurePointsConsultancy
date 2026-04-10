@@ -4,7 +4,7 @@
   "outputDirectory": "frontend/dist",
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!sitemap\\.xml|favicon\\.svg|icons\\.svg|robots\\.txt).+)",
       "destination": "/index.html"
     }
   ]
